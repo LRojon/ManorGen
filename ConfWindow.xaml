@@ -1,11 +1,11 @@
-﻿<Window x:Class="ManorGen.Conf"
+﻿<Window x:Class="ManorGen.ConfWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ManorGen"
         mc:Ignorable="d"
-        Title="Conf" Height="110" Width="281.6" ResizeMode="NoResize" >
+        Title="Configuration" Height="110" Width="281.6" ResizeMode="NoResize" >
     <Grid Margin="0">
         <Label Content="Dimension :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox PreviewTextInput="Textbox_PreviewTextInput" x:Name="width" HorizontalAlignment="Left" Height="23" Margin="97,10,0,0" TextWrapping="Wrap" Text="1344" VerticalAlignment="Top" Width="70"/>

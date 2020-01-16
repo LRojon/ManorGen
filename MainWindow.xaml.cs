@@ -32,7 +32,7 @@ namespace ManorGen
 
         private void Conf_Click(object sender, RoutedEventArgs e)
         {
-            Conf conf = new Conf();
+            ConfWindow conf = new ConfWindow();
             conf.ShowDialog();
         }
     }

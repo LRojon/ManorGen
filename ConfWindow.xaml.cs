@@ -18,7 +18,7 @@ namespace ManorGen
     /// <summary>
     /// Logique d'interaction pour Conf.xaml
     /// </summary>
-    public partial class Conf : Window
+    public partial class ConfWindow : Window
     {
         /**
          * Tools Section
@@ -32,7 +32,7 @@ namespace ManorGen
         /**
          * Main Section
          */
-        public Conf()
+        public ConfWindow()
         {
             InitializeComponent();
             DoubleCollection dc = new DoubleCollection()
