@@ -11,7 +11,7 @@
         <DockPanel LastChildFill="False" Margin="0">
             <Menu DockPanel.Dock="Top" Name="menu">
                 <MenuItem Header="Fichier">
-                    <MenuItem Header="Générer">
+                    <MenuItem Header="Générer" Click="Gen_Click">
                         <MenuItem.Icon>
                             <fa:ImageAwesome Icon="Home"/>
                         </MenuItem.Icon>
@@ -29,7 +29,7 @@
                     </MenuItem>
                 </MenuItem>
             </Menu>
-            <Image DockPanel.Dock="Bottom" Name="img"/>
+            <Image DockPanel.Dock="Bottom" Name="img" Stretch="None"/>
         </DockPanel>
 
     </Grid>

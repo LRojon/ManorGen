@@ -45,6 +45,10 @@ namespace ManorGen
                 64
             };
             this.slider.Ticks = dc;
+            this.width.Text = Global.Conf.Width.ToString();
+            this.height.Text = Global.Conf.Height.ToString();
+            this.slider.Value = Global.Conf.Size;
+            this.size.Content = Global.Conf.Size;
         }
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -53,7 +57,7 @@ namespace ManorGen
             this.size.Content = s.Value;
             this.width.Text = (((int)(1360 / s.Value)) * s.Value).ToString();
             this.height.Text = (((int)(738 / s.Value)) * s.Value).ToString();
-            Global.Manor.Conf.Size = (int)s.Value;
+            Global.Conf.Size = (int)s.Value;
         }
 
         private void Textbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -65,9 +69,9 @@ namespace ManorGen
         {
             TextBox tb = (TextBox)sender;
             if (tb.Name == "width")
-                Global.Manor.Conf.Width = Convert.ToInt32(tb.Text);
+                Global.Conf.Width = Convert.ToInt32(tb.Text);
             else if (tb.Name == "height")
-                Global.Manor.Conf.Height = Convert.ToInt32(tb.Text);
+                Global.Conf.Height = Convert.ToInt32(tb.Text);
         }
     }
 }

@@ -8,8 +8,5 @@ namespace ManorGen.Class
 {
     class Manor
     {
-        private Conf _conf;
-
-        public Conf Conf { get => _conf; set => _conf = value; }
     }
 }
