@@ -72,12 +72,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class\Conf.cs" />
-    <Compile Include="Class\Enum\Door.cs" />
-    <Compile Include="Class\Enum\Wall.cs" />
+    <Compile Include="Class\Enum\Direction.cs" />
     <Compile Include="Class\Global.cs" />
     <Compile Include="Class\Manor.cs" />
+    <Compile Include="Class\Monster.cs" />
     <Compile Include="Class\Room.cs" />
     <Compile Include="Class\Tile.cs" />
+    <Compile Include="Class\Trap.cs" />
     <Compile Include="ConfWindow.xaml.cs">
       <DependentUpon>ConfWindow.xaml</DependentUpon>
     </Compile>

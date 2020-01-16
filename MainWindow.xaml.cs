@@ -29,13 +29,13 @@ namespace ManorGen
         {
             this.img.Source = Global.ImageSourceFromBitmap(new Tile()
             {
-                Door = Door.None,
-                Walls = new List<Wall>()
+                Door = Direction.North,
+                Walls = new List<Direction>()
                 {
-                    Wall.North,
-                    Wall.East,
-                    Wall.South,
-                    Wall.West
+                    Direction.North,
+                    Direction.None,
+                    Direction.None,
+                    Direction.None
                 }
             }.GetTileImage());
         }

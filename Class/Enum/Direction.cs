@@ -1,6 +1,6 @@
 ﻿namespace ManorGen.Class.Enum
 {
-    public enum Wall
+    public enum Direction
     {
         North,
         East,
