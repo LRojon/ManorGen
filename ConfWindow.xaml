@@ -8,7 +8,7 @@
         Title="Configuration" Height="110" Width="281.6" ResizeMode="NoResize" >
     <Grid Margin="0">
         <Label Content="Dimension :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox PreviewTextInput="Textbox_PreviewTextInput" x:Name="width" HorizontalAlignment="Left" Height="23" Margin="97,10,0,0" TextWrapping="Wrap" Text="1344" VerticalAlignment="Top" Width="70"/>
+        <TextBox TextChanged="Textbox_TextChanged" PreviewTextInput="Textbox_PreviewTextInput" x:Name="width" HorizontalAlignment="Left" Height="23" Margin="97,10,0,0" TextWrapping="Wrap" Text="1344" VerticalAlignment="Top" Width="70"/>
         <Label Content="X" HorizontalAlignment="Left" Margin="172,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1,0.555"/>
         <TextBox PreviewTextInput="Textbox_PreviewTextInput" x:Name="height" HorizontalAlignment="Left" Height="23" Margin="195,10,0,0" TextWrapping="Wrap" Text="736" VerticalAlignment="Top" Width="70"/>
         <Label Content="Taille des cases :" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>

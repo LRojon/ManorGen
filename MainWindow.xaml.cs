@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ManorGen.Class;
 
 namespace ManorGen
 {
@@ -22,9 +23,12 @@ namespace ManorGen
     public partial class MainWindow : Window
     {
         /**
-         * Main Section
+         * Declaration Section
          */
 
+        /**
+         * Main Section
+         */
         public MainWindow()
         {
             InitializeComponent();
@@ -32,6 +36,7 @@ namespace ManorGen
 
         private void Conf_Click(object sender, RoutedEventArgs e)
         {
+            Global.Manor.Conf = Global.Manor.Conf;
             ConfWindow conf = new ConfWindow();
             conf.ShowDialog();
         }

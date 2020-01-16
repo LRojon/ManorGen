@@ -58,7 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Conf.xaml">
+    <Page Include="ConfWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -70,8 +70,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Conf.xaml.cs">
-      <DependentUpon>Conf.xaml</DependentUpon>
+    <Compile Include="Class\Conf.cs" />
+    <Compile Include="Class\Enum\Door.cs" />
+    <Compile Include="Class\Enum\Wall.cs" />
+    <Compile Include="Class\Global.cs" />
+    <Compile Include="Class\Manor.cs" />
+    <Compile Include="Class\Room.cs" />
+    <Compile Include="Class\Tiles.cs" />
+    <Compile Include="ConfWindow.xaml.cs">
+      <DependentUpon>ConfWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -105,8 +112,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ManorGen.Class
 {
-    class Manor
+    class Global
     {
-        private Conf _conf;
-
-        public Conf Conf { get => _conf; set => _conf = value; }
+        public static Manor Manor = new Manor()
+        {
+            Conf = new Conf(),
+        };
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ManorGen.Class;
 
 namespace ManorGen
 {
@@ -52,11 +53,21 @@ namespace ManorGen
             this.size.Content = s.Value;
             this.width.Text = (((int)(1360 / s.Value)) * s.Value).ToString();
             this.height.Text = (((int)(738 / s.Value)) * s.Value).ToString();
+            Global.Manor.Conf.Size = (int)s.Value;
         }
 
         private void Textbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = !IsTextAllowed(e.Text);
+        }
+
+        private void Textbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if (tb.Name == "width")
+                Global.Manor.Conf.Width = Convert.ToInt32(tb.Text);
+            else if (tb.Name == "height")
+                Global.Manor.Conf.Height = Convert.ToInt32(tb.Text);
         }
     }
 }
