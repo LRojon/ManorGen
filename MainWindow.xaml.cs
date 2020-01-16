@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,9 +21,19 @@ namespace ManorGen
     /// </summary>
     public partial class MainWindow : Window
     {
+        /**
+         * Main Section
+         */
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Conf_Click(object sender, RoutedEventArgs e)
+        {
+            Conf conf = new Conf();
+            conf.ShowDialog();
         }
     }
 }

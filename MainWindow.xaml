@@ -4,10 +4,33 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ManorGen"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Width="1366" Height="768" ResizeMode="CanMinimize">
     <Grid>
-        <Menu x:Name="menu" Height="25" VerticalAlignment="Top" Margin="0,0,0,4"/>
+        <DockPanel LastChildFill="False" Margin="0">
+            <Menu DockPanel.Dock="Top" Name="menu">
+                <MenuItem Header="Fichier">
+                    <MenuItem Header="Générer">
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome Icon="Home"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Configurer" Click="Conf_Click">
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome Icon="Cog"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Quitter">
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome Icon="Times"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+            <Image DockPanel.Dock="Bottom" Name="img"/>
+        </DockPanel>
 
     </Grid>
 </Window>
