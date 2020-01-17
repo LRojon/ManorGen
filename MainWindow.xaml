@@ -8,8 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Width="1366" Height="768" ResizeMode="CanMinimize">
     <Grid>
-        <DockPanel LastChildFill="False" Margin="0">
-            <Menu DockPanel.Dock="Top" Name="menu">
+        <Menu Name="menu" VerticalAlignment="Top" Height="17">
                 <MenuItem Header="Fichier">
                     <MenuItem Header="Générer" Click="Gen_Click">
                         <MenuItem.Icon>
@@ -29,8 +28,7 @@
                     </MenuItem>
                 </MenuItem>
             </Menu>
-            <Image DockPanel.Dock="Bottom" Name="img" Stretch="None"/>
-        </DockPanel>
+        <Image Name="img" Stretch="Fill" VerticalAlignment="Top" Margin="0,20,0,0" OpacityMask="#FFFF0505"/>
 
     </Grid>
 </Window>

@@ -16,14 +16,14 @@ namespace ManorGen.Class
 
         public Direction Door { get => _door; set => _door = value; }
         public List<Direction> Walls { get => _walls; set => _walls = value; }
+        internal Trap Trap { get => _trap; set => _trap = value; }
 
-        public Bitmap GetTileImage()
+        public Bitmap GetImage()
         {
             double doorSize = .75;
             var bmp = new Bitmap(Global.Conf.Size, Global.Conf.Size);
             using (Graphics g = Graphics.FromImage(bmp))
             {
-                g.FillRectangle(new SolidBrush(Color.LightSlateGray), 0, 0, Global.Conf.Size, Global.Conf.Size);
                 foreach (Direction w in this.Walls)
                 {
                     switch (w)
@@ -49,13 +49,16 @@ namespace ManorGen.Class
                         g.FillRectangle(new SolidBrush(Color.LightSlateGray), (int)(Global.Conf.Size / 2 - Global.Conf.Size * doorSize / 2), Global.Conf.Size/16, (int)(Global.Conf.Size * doorSize), Global.Conf.Size / 16);
                         break;
                     case Direction.East:
-                        g.FillRectangle(new SolidBrush(Color.Brown), Global.Conf.Size - Global.Conf.Size / 8, (int)(Global.Conf.Size / 2 - Global.Conf.Size * doorSize / 2), Global.Conf.Size / 16, (int)(Global.Conf.Size * doorSize));
+                        g.FillRectangle(new SolidBrush(Color.Brown), Global.Conf.Size - Global.Conf.Size / 16, (int)(Global.Conf.Size / 2 - Global.Conf.Size * doorSize / 2), Global.Conf.Size / 16, (int)(Global.Conf.Size * doorSize));
+                        g.FillRectangle(new SolidBrush(Color.LightSlateGray), Global.Conf.Size - Global.Conf.Size / 8, (int)(Global.Conf.Size / 2 - Global.Conf.Size * doorSize / 2), Global.Conf.Size / 16, (int)(Global.Conf.Size * doorSize));
                         break;
                     case Direction.South:
-                        g.FillRectangle(new SolidBrush(Color.Brown), (int)(Global.Conf.Size / 2 - Global.Conf.Size * doorSize / 2), Global.Conf.Size - Global.Conf.Size / 8, (int)(Global.Conf.Size * doorSize), Global.Conf.Size / 16);
+                        g.FillRectangle(new SolidBrush(Color.Brown), (int)(Global.Conf.Size / 2 - Global.Conf.Size * doorSize / 2), Global.Conf.Size - Global.Conf.Size / 16, (int)(Global.Conf.Size * doorSize), Global.Conf.Size / 16);
+                        g.FillRectangle(new SolidBrush(Color.LightSlateGray), (int)(Global.Conf.Size / 2 - Global.Conf.Size * doorSize / 2), Global.Conf.Size - Global.Conf.Size / 8, (int)(Global.Conf.Size * doorSize), Global.Conf.Size / 16);
                         break;
                     case Direction.West:
                         g.FillRectangle(new SolidBrush(Color.Brown), 0, (int)(Global.Conf.Size / 2 - Global.Conf.Size * doorSize / 2), Global.Conf.Size / 16, (int)(Global.Conf.Size * doorSize));
+                        g.FillRectangle(new SolidBrush(Color.LightSlateGray), Global.Conf.Size / 16, (int)(Global.Conf.Size / 2 - Global.Conf.Size * doorSize / 2), Global.Conf.Size / 16, (int)(Global.Conf.Size * doorSize));
                         break;
                 }
             }

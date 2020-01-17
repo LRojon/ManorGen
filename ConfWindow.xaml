@@ -20,7 +20,7 @@
                 VerticalAlignment="Top" 
                 Width="129" Height="26" 
                 Maximum="64" 
-                Minimum="8" 
+                Minimum="16" 
                 Value="32" 
                 TickPlacement="BottomRight" 
                 IsSnapToTickEnabled="True"/>

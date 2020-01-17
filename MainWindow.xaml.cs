@@ -2,6 +2,8 @@
 using System.Windows;
 using ManorGen.Class.Enum;
 using System.Collections.Generic;
+using System.Drawing;
+using Point = System.Drawing.Point;
 
 namespace ManorGen
 {
@@ -21,28 +23,18 @@ namespace ManorGen
         {
             InitializeComponent();
 
-            Global.imgWidth = (int)this.img.Width;
-            Global.imgHeight = (int)this.img.Height;
+            /*Global.imgWidth = (int)this.img.Width;
+            Global.imgHeight = (int)this.img.Height;*/
         }
 
         private void Gen_Click(object sender, RoutedEventArgs e)
         {
-            this.img.Source = Global.ImageSourceFromBitmap(new Tile()
-            {
-                Door = Direction.North,
-                Walls = new List<Direction>()
-                {
-                    Direction.North,
-                    Direction.None,
-                    Direction.None,
-                    Direction.None
-                }
-            }.GetTileImage());
+            Manor tmp = new Manor();
+            this.img.Source = Global.ImageSourceFromBitmap(tmp.GetImage());
         }
 
         private void Conf_Click(object sender, RoutedEventArgs e)
         {
-            Global.Conf = Global.Conf;
             ConfWindow conf = new ConfWindow();
             conf.ShowDialog();
         }

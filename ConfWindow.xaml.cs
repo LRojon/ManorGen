@@ -41,7 +41,6 @@ namespace ManorGen
 
             DoubleCollection dc = new DoubleCollection()
             {
-                8,
                 16,
                 32,
                 48,
