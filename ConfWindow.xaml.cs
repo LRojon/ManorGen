@@ -35,7 +35,10 @@ namespace ManorGen
          */
         public ConfWindow()
         {
+            Conf tmp = new Conf(Global.Conf);
             InitializeComponent();
+            Global.Conf = tmp;
+
             DoubleCollection dc = new DoubleCollection()
             {
                 8,
@@ -58,6 +61,8 @@ namespace ManorGen
             this.width.Text = (((int)(1360 / s.Value)) * s.Value).ToString();
             this.height.Text = (((int)(738 / s.Value)) * s.Value).ToString();
             Global.Conf.Size = (int)s.Value;
+            Global.Conf.Width = Convert.ToInt32(this.width.Text);
+            Global.Conf.Height = Convert.ToInt32(this.height.Text);
         }
 
         private void Textbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
